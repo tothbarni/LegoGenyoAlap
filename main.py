@@ -9,6 +9,6 @@ import Feladatok
 
 # főprogram
 oraifeladat = Feladatok.Feladatok()
-oraifeladat.szinMeres()
+oraifeladat.scanner1b()
 
 # asztal 55, fekete 7

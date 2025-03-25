@@ -27,3 +27,23 @@ class Feladatok():
 
     def csipog(self):
         self.ev3.speaker.beep()
+
+    def hanyvonal(self, db, seb, hatar):
+        for _ in range(db):
+            self.robot.drive(seb, 0)
+            fekete = False
+            self.ido.reset()
+            while not (fekete and self.cs.reflection() >= hatar):
+                if self.cs.reflection() < hatar:
+                    if not fekete:
+                        self.ido.reset()
+                        fekete = True
+                wait(10)
+            szelesseg = self.ido.time() / 10
+            print("Vonal szélesség:", szelesseg, "mm")
+            self.robot.stop(Stop.BRAKE)
+
+
+    def scanner1b(self):
+        hatar = (7+55)/2
+        self.hanyvonal(4, 100, hatar)
