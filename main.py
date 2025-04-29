@@ -9,6 +9,8 @@ import Feladatok
 
 # főprogram
 oraifeladat = Feladatok.Feladatok()
-oraifeladat.scanner1b()
+#oraifeladat.scanner1b()
+oraifeladat.szinMeres()
+oraifeladat.szineket_logol(sebesseg=100, idotartam=3500)
 
-# asztal 55, fekete 7
+# asztal 53, fekete 7
